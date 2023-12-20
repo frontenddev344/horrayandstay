@@ -1046,6 +1046,15 @@ section.contact-intero .contact-wrapper p span a {
   section.discover-wrapper .discover-inner .discover-text h3 {
     font-size: 27px;
   }
+  .casino-hotels-wrapper .best-casino-text {
+    padding: 30px 0;
+  }
+  .casino-hotels-wrapper .best-casino-text h3 {
+    font-size: 21px;
+  }
+  section.why-choose .choose-box .row .choose-box-main {
+    padding: 45px 30px 45px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

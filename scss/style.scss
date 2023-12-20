@@ -1,0 +1,1067 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
+@import './variables';
+@import './mixin';
+
+body {
+    /* Set "my-sec-counter" to 0 */
+    counter-reset: my-sec-counter;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    color: $color-black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.color-bar {
+    position: relative;
+
+    .color1 {
+        border-top: 5px solid $active-color;
+        float: left;
+        width: 25%;
+    }
+
+    .color2 {
+        border-top: 5px solid $color_2;
+        float: left;
+        width: 25%;
+    }
+
+    .color3 {
+        border-top: 5px solid $color_3;
+        float: left;
+        width: 25%;
+    }
+
+    .color4 {
+        border-top: 5px solid $color_4;
+        float: left;
+        width: 25%;
+    }
+}
+
+.page-header {
+    position: static;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+    z-index: 999;
+    width: 100%;
+}
+
+
+.page-header.is-sticky {
+    position: sticky;
+    box-shadow: 0 2px 8px rgba(16, 16, 16, 0.21);
+    padding: 14px 0;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.35s ease-out;
+    background-color: $color-white;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar-area {
+    padding: 4px 0;
+}
+
+a.site-logo img {
+    max-width: 250px;
+}
+
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+
+        li {
+            padding: 12px 16px;
+
+            a {
+                color: $menu-color;
+                display: block;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1rem;
+                transition: all 0.3s;
+                background-color: transparent;
+                text-transform: uppercase;
+
+                border-radius: 30px;
+
+                &.active {
+                    color: $active-color;
+                }
+
+                &:hover {
+                    color: $active-color;
+
+                }
+            }
+        }
+    }
+}
+
+.nav-toggler {
+    border: 3px solid transparent;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+
+    span {
+        width: 28px;
+        height: 3px;
+        background-color: $active-color;
+        display: block;
+        transition: .3s;
+
+        &:before {
+            width: 28px;
+            height: 3px;
+            background-color: $active-color;
+            display: block;
+            transition: .3s;
+            content: '';
+            transform: translateY(-9px);
+        }
+
+        &:after {
+            width: 28px;
+            height: 3px;
+            background-color: $active-color;
+            display: block;
+            transition: .3s;
+            content: '';
+            transform: translateY(6px);
+        }
+    }
+}
+
+.nav-toggler.toggler-open {
+    span {
+        background-color: transparent;
+
+        &:before {
+            transform: translateY(0px) rotate(45deg);
+        }
+
+        &:after {
+            transform: translateY(-3px) rotate(-45deg);
+        }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+// 
+
+.swiper-slide-active .img {
+    animation: scale 5s ease forwards;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+section.site-banner {
+    overflow: hidden;
+    height: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.silder-img1 {
+    background: url(../images/Homebnner.jpeg);
+    @include silder-img1;
+
+    &::after {
+        @include silder-after;
+    }
+}
+
+.silder-img2 {
+    background: url(../images/slider3.jpg);
+    @include silder-img1;
+
+    &::after {
+        @include silder-after
+    }
+}
+
+.silder-text-banner {
+    h1 {
+        border-left: 10px solid $active-color;
+        padding: 1.5% 2.5% 1.5% 1%;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: $color-white;
+
+    }
+}
+
+
+section.discover-wrapper {
+    padding: 80px 0;
+
+    .discover-inner {
+        .discover-text {
+            padding: 0 50px;
+
+            h3 {
+                font-size: 30px;
+                font-weight: 700;
+                color: #3a3a3a;
+                max-width: 500px;
+                width: 100%;
+
+                span {
+                    color: $active-color;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: #767676;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+section.hote-cards {
+    .hote-cards-inner {
+        .row .col-lg-4.col-md-6.col-sm-12:nth-child(4) {
+            margin-top: 30px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: capitalize;
+            padding: 0 0 50px 0;
+            color: $active-color;
+        }
+
+        .inner-box {
+            position: relative;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            height: 100%;
+            z-index: 9;
+            background-color: $color-white;
+            -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+            padding-bottom: 40px;
+
+            &:hover .image-box figure img {
+                transform: scale(1.2);
+            }
+
+            .image-box {
+                position: relative;
+
+                figure {
+                    margin: 0;
+                    overflow: hidden;
+
+                    img {
+                        transition: all 0.3s linear;
+                        height: 277px;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .content-box {
+                padding: 21px 30px 30px;
+
+
+
+                h4.title {
+                    margin-bottom: 11px;
+                    font-weight: 600;
+
+                    a {
+                        text-transform: capitalize;
+                    }
+                }
+
+                p {
+                    line-height: 30px;
+                    margin-bottom: 28px;
+                }
+
+                .view-btn {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 36px;
+                    width: 100%;
+                    max-width: 200px;
+                }
+
+                a.view-more {
+                    color: $color-white;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    background-color: $active-color;
+                    width: 100%;
+                    height: 51px;
+                    line-height: 51px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    padding: 0 30px;
+                    z-index: 99;
+                    border-radius: 30px;
+                    border: 1px solid $active-color;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $active-color;
+                        border: 1px solid $active-color;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.worked {
+    background: url(../images/photo.jpg);
+    padding: 50px 0;
+    margin-top: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+        content: '';
+        background: #2b2e4aba;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+    }
+
+    .worked-wrapper {
+        p {
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 30px;
+            color: $color-white;
+
+        }
+    }
+
+    .choose-sec {
+        margin-top: 50px;
+
+        .row {
+            justify-content: center;
+
+            .unparalleled {
+                .heading-default {
+                    h3 {
+                        font-size: 24px;
+                    }
+                }
+
+                .widget-wrap {
+                    box-shadow: -10px 10px 0px 0px #E84545;
+                    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+                    background-color: #fff;
+                    padding: 20px 20px 20px 20px;
+                    max-width: 580px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border-radius: 6px 6px 6px 6px;
+
+
+                    &.one {
+                        margin: 50px 10px 10px 10px;
+                    }
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.gambling-disclaimer {
+    padding: 80px 0;
+
+    .disclaimer-dask {
+        h5 {
+            font-size: 26px;
+            font-weight: bold;
+            color: $color-black;
+        }
+
+        p {
+            color: $color-black;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+    }
+}
+
+footer.footer {
+    background-color: #3a3a3a;
+    padding-top: 60px;
+
+
+    .footer-inner {
+        .footer-logo {
+            p {
+                color: $color-white;
+                font-size: 16px;
+                width: 70%;
+            }
+        }
+
+        .footer-social a {
+            color: #FFFFFF;
+            margin-right: 10px;
+            -webkit-transition: 0.2s ease-in-out;
+            transition: 0.2s ease-in-out;
+
+            i {
+                background: #fff;
+                height: 40px;
+                width: 40px;
+                padding: 9px;
+                text-align: center;
+                color: $active-color;
+                font-size: 22px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: $active-color;
+                    color: $color-white;
+                }
+            }
+        }
+
+        .footer-menu {
+            h3 {
+                color: $color-white;
+                font-size: 20px;
+            }
+
+            ul {
+                margin-top: 20px;
+
+                li {
+                    margin-bottom: 16px;
+
+                    a {
+                        color: $color-white;
+                        font-size: 16px;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            color: $active-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .instagram {
+            width: 100%;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .instagram a {
+            border-radius: 5px;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 28%;
+            padding-bottom: 23%;
+            margin: 0 15px 15px 0;
+        }
+
+        .instagram a img {
+            position: absolute;
+            border-radius: 5px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            -webkit-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+        }
+
+        h3.instagram-wrapper {
+            color: #fff;
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+    }
+
+    .copyright {
+        font-size: 15px;
+        background-color: rgba(0, 0, 0, 0.15);
+        padding: 20px 0;
+        color: #8588A2;
+        margin-top: 60px;
+
+        .copy-text {
+            text-align: center;
+            color: $color-white;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.footer-logo img {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+section.privacy-policy {
+    background: url(../images/Privacy.jpg);
+    @include inner-bg;
+
+    &::after {
+        @include inner-page-after;
+
+    }
+
+    .privacy-heading {
+        h2 {
+            text-align: center;
+            color: $color-white;
+            font-size: 30px;
+
+        }
+    }
+}
+
+section.policy {
+    padding: 80px 0;
+
+    .privacy-wrapper {
+        .privacy-inner-textbox {
+            h5 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-transform: capitalize;
+                color: $color-black
+            }
+
+            p {
+                color: $color-black;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 30px;
+                padding-bottom: 14px;
+                margin: 0;
+
+            }
+
+            ul {
+                li {
+                    position: relative;
+                    padding-left: 20px;
+                    padding-bottom: 15px;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        background: $color-black;
+                        width: 8px;
+                        height: 8px;
+                        top: 8px;
+                        left: 0;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// inner-page-bnr css start from here
+
+
+section.inner-page-bnr {
+    background: url(../images/America.jpg);
+    @include inner-bg;
+
+    &::after {
+        @include inner-page-after;
+    }
+
+    .inner-page-heading {
+        h2 {
+            color: $color-white;
+            text-align: center
+        }
+    }
+}
+
+section.united-states {
+    padding: 80px 0;
+
+    .united {
+        .unbiased-text {
+            h3 {
+                font-size: 40px;
+                line-height: 47px;
+                font-weight: 700;
+                color: $color-black;
+
+                span {
+                    color: $active-color;
+                }
+            }
+
+            p {
+                color: $color-black;
+                font-size: 16px;
+                max-width: 590px;
+                line-height: 30px;
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+section.await {
+    padding-bottom: 80px;
+
+    .best-casino-await {
+        h3 {
+            text-align: center;
+            padding-bottom: 50px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .casino-await {
+            .row {
+                justify-content: center;
+
+                .col-lg-4.col-md-6.col-sm-12 {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .bellagio-box {
+                box-shadow: 0 2px 8px rgba(16, 16, 16, 0.21);
+                background-color: $color-white;
+                height: 100%;
+
+                figure {
+                    margin: 0;
+
+                    img {
+                        height: 263px;
+                        object-fit: cover;
+                    }
+                }
+
+                .bellagio-text {
+                    padding: 20px;
+
+                    h4 {
+                        font-size: 22px;
+                        color: $color-black;
+                        font-weight: bold;
+                        margin-bottom: 14px
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.destinations {
+    .thrilling {
+        p {
+            font-size: 16px;
+            color: $color-black;
+            font-weight: 400;
+        }
+    }
+}
+
+section.inner-page-bnr.europe {
+    background: url(../images/europe.jpg);
+    @include inner-bg;
+}
+
+section.inner-page-bnr.asia {
+    background: url(../images/asia.jpg);
+    @include inner-bg;
+}
+
+section.inner-page-bnr.canada {
+    background: url(../images/Canada.avif);
+    @include inner-bg;
+}
+
+section.fairmont-card {
+    padding-bottom: 80px;
+
+}
+
+section.fairmont-card .fairmont-card-inner:last-child {
+    margin: 0;
+}
+
+.fairmont-card-inner {
+    padding: 17px;
+    background: rgb(255 255 255);
+    margin-bottom: 40px;
+    box-shadow: 0 0 7px rgb(240 89 7 / 30%);
+
+    .fairmont-img {
+        img {
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+
+    .fairmont-text {
+        h3 {
+            font-size: 26px;
+            font-weight: 600;
+            color: $color-black;
+        }
+
+        p {
+            span {
+                color: $active-color;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        ul {
+            li {
+                position: relative;
+                padding-left: 20px;
+                padding-bottom: 15px;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background: $active-color;
+                    width: 8px;
+                    height: 8px;
+                    top: 8px;
+                    left: 0;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+section.why-choose {
+    padding-bottom: 80px;
+
+    .why-choose-box {
+        text-align: center;
+        padding-bottom: 30px;
+
+        h4 {
+            font-size: 30px;
+            text-transform: capitalize;
+        }
+    }
+
+    .choose-box {
+        padding-top: 30px;
+
+        .row {
+            justify-content: center;
+
+            .col-lg-4 {
+                margin-bottom: 50px;
+            }
+
+            .choose-box-main {
+                position: relative;
+                overflow: hidden;
+                height: 100%;
+                padding: 45px 50px 45px;
+                background-color: $color-white;
+                box-shadow: 0 10px 60px rgba(0, 0, 0, 0.07);
+                transition: all 0.3s linear;
+                z-index: 2;
+                border-radius: 6px;
+
+                &:hover h4,
+                &:hover p {
+                    color: $color-white;
+                }
+
+                &:hover span.count {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+
+                span.count {
+                    position: absolute;
+                    right: -40px;
+                    top: -70px;
+                    height: 150px;
+                    width: 150px;
+                    background-color: $active-color;
+                    color: $color-white;
+                    border-radius: 50%;
+                    transition: all 0.3s linear;
+
+                    &::after {
+                        content: counter(my-sec-counter, decimal-leading-zero);
+                        counter-increment: my-sec-counter;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-30px, 10px);
+                        position: absolute;
+                        color: #f6f2f0;
+                        font-size: 30px;
+                        line-height: 1;
+                        font-family: var(--font-current-theme1);
+                        font-weight: 600;
+                        font-style: normal;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $active-color;
+                    transform: scale(0);
+                    transform-origin: right top;
+                    border-radius: 0 0 0 500px;
+                    content: "";
+                    z-index: -1;
+                    transition: all 300ms linear;
+                }
+
+                &:hover::after {
+                    transform: scale(1.5);
+                }
+
+                h4 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    max-width: 83%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+section.gambling-disclaimer.south {
+    padding-top: 0;
+}
+
+// 
+section.inner-page-bnr.south-africa {
+    background: url(../images/South-africa.jpg);
+    @include inner-bg;
+}
+
+section.south-africa-casino {
+    margin-top: 80px;
+
+    .south-africa-wrapper {
+        padding: 30px;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 0 7px rgba(240, 89, 7, 0.3);
+
+        h3 {
+            font-size: 26px;
+            color: $color-black;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.casino-hotels-wrapper {
+    margin-top: 80px;
+    padding: 30px;
+    border: 1px solid;
+
+    .row {
+        align-items: center;
+    }
+
+    .grandWest img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .best-casino-text {
+        padding: 30px;
+
+        h3 {
+            color: $color-black;
+            font-size: 26px;
+        }
+
+        p {
+            color: $color-black;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+    }
+}
+
+section.destinations.one {
+    padding-top: 80px;
+}
+
+.confident {
+    text-align: center;
+    padding-top: 24px;
+}
+
+section.inner-page-bnr.new-zealand {
+    background: url(../images/new-zealand.jpg);
+    @include inner-bg;
+}
+
+section.south-africa-casino.opps {
+    padding-bottom: 80px;
+}
+
+section.inner-page-bnr.contact {
+    background: url(../images/Contact.jpg);
+    @include inner-bg;
+}
+
+.cookie-alert {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 320px;
+    margin: 0 !important;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+}
+
+.cookie-alert.show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+}
+
+section.contact-intero {
+    padding: 80px 0;
+
+    .contact-wrapper {
+        h5 {
+            font-size: 26px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $color-black;
+        }
+
+        p {
+            font-size: 16px;
+            color: $color-black;
+            line-height: 30px;
+
+            span a {
+                color: $active-color;
+            }
+        }
+    }
+}
+
+@import '_responsive';

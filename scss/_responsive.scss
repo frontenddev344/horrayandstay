@@ -71,6 +71,17 @@
     section.united-states .united .unbiased-text p {
         max-width: 100%;
     }
+
+    .unparalleled {
+        display: flex;
+        justify-content: center;
+    }
+
+    section.worked .choose-sec .row .unparalleled .widget-wrap.one {
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -78,8 +89,14 @@
         margin-top: 30px;
     }
 
-    .unparalleled {
+    footer.footer .footer-inner .footer-menu ul {
         margin-top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    footer.footer .footer-inner .footer-menu h3 {
+        margin-top: 10px;
     }
 }
 
@@ -107,5 +124,14 @@
 
     section.why-choose .choose-box .row .choose-box-main {
         padding: 45px 30px 45px;
+    }
+
+    footer.footer .footer-inner .footer-menu ul {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    footer.footer .footer-inner .footer-menu ul li {
+        margin-bottom: 0;
     }
 }

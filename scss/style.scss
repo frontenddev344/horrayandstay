@@ -1064,4 +1064,351 @@ section.contact-intero {
     }
 }
 
+
+
+/* mobile-view-design */
+
+
+.bating-brand-image img {
+    width: 116px;
+    object-fit: cover;
+}
+
+.bating-brand-image {
+    width: 50%;
+    text-align: center;
+}
+
+.bating-brand-text {
+    width: 50%;
+}
+
+.bating-brand-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: #ffffff;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    padding-left: 4px;
+    border-radius: 11px;
+    padding-right: 6px;
+    border-bottom: 3px solid #f05907;
+}
+
+.bating-brand-text h6 {
+    font-size: 18px;
+    padding: 2px 2px;
+    text-align: center;
+}
+
+a.sign-up {
+    background: #ffffff;
+    color: #0f254e;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    width: 100%;
+    max-width: 120px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 19px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main-rate-star {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+p.rate-now {
+    margin-bottom: 6px !important;
+}
+
+p.rated-star {
+    padding-left: 6px;
+}
+
+p.rating-text {
+    padding-bottom: 4px !important;
+    margin: 0px !important;
+    margin-top: 13px !important;
+}
+
+.bating-brand-text p {
+    text-align: center;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.product-cart a:hover {
+    box-shadow: 0 0 20px 0px #f05907;
+}
+
+
+
+
+.card-design-text-img .container {
+    display: block;
+}
+
+/* PRODUCT CARD */
+
+.product-card {
+    background-color: #9b979721;
+    border-radius: 5px;
+    color: #2f3640;
+    transition: all linear .2s;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    align-items: center;
+    height: 287px;
+}
+
+.product-text {
+    width: 42%;
+}
+
+.product-cart {
+    width: 20%;
+    padding-right: 20px;
+}
+
+.product-card:hover,
+.product-card:active {
+    box-shadow: .2em .5em .5em rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+.product-img {
+    border-radius: 5px 0px 0px 5px;
+    height: 100%;
+    width: 30%;
+}
+
+.product-img.img-one img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-img.img-one {
+    width: 100%;
+    max-width: 287px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-text {
+    padding: 1em;
+    text-align: center;
+}
+
+.product-cart a {
+    border: 0;
+    border-radius: 10px;
+    color: #f5f6fa !important;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 1em;
+    text-transform: uppercase;
+    transition: all linear .3s;
+    width: 100%;
+    background: #f05907;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.product-cart button:hover {
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+
+/* color */
+
+.product-text h3 {
+    color: #f05907;
+    font-size: 30px;
+}
+
+h1.beste {
+    text-align: center;
+    color: #f05907;
+}
+
+.mobile-view-design {
+    display: none;
+}
+
+/* media queries */
+
+
+@media screen and (max-width: 575px) {
+    .desktop {
+        display: none;
+    }
+
+    img.logoBl {
+        display: block;
+    }
+
+    img.logoWt {
+        display: none;
+    }
+
+    header#myHeader {
+        padding: 12px 0;
+        background: #fff;
+    }
+
+
+
+    .desktop-view {
+        display: none;
+    }
+
+    h6.heading_main {
+        font-size: 20px !important;
+        color: #000;
+    }
+
+    h1.beste {
+        font-size: 26px !important;
+        margin: 20px 0;
+    }
+
+    .mobile-view-design {
+        display: block;
+    }
+
+    .warapper {
+        padding: 10px;
+    }
+
+    p.rating-text {
+        font-size: 14px;
+    }
+
+    p.rated-star {
+        font-size: 12px;
+    }
+
+}
+
+
+.one_o p {
+    color: #000;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* today 5/5/23 */
+/* today 5/5/23 */
+.main_box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.start_line {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: #ffffff;
+    margin: 17px 0;
+}
+
+// .awesome {}
+
+.awesome a {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #f05907bd;
+    padding: 11px;
+    text-align: center;
+    border-radius: 6px;
+    display: block;
+}
+
+
+
+.warapper {
+    background: #d7d9db00;
+    padding: 20px;
+    border: 4px solid #f05907;
+    border-radius: 6px;
+    margin: 30px 0;
+}
+
+.notpad {
+    border-left: 2px solid #f05907;
+    border-right: 2px solid #f05907;
+
+}
+
+p.rated-star {
+    color: #f05907;
+}
+
+
+
+.rate.notpad p,
+p.rated-star {
+    padding-bottom: 0;
+}
+
+
+.notpad {
+    padding: 0 9px;
+}
+
+.text_auality {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.beting_logo {
+    width: 50%;
+}
+
+.one_o {
+    width: 50%;
+}
+
+.beting_logo img {
+    width: 100%;
+    padding: 0 15px 0 0;
+    height: 130px;
+    object-fit: contain;
+}
+
+
+img[alt="playfina"] {
+    height: 85px;
+}
+
+
+
+
+
+
+
 @import '_responsive';

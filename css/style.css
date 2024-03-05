@@ -31,6 +31,14 @@ img {
   margin: 0 auto;
 }
 
+.mobile-view-design.americapage {
+  display: none;
+}
+
+.desktop.americapage {
+  display: block;
+}
+
 .color-bar {
   position: relative;
 }
